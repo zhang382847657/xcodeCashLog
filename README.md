@@ -10,6 +10,7 @@
   把打包的ipa文件的后缀改为zip，然后解压，解压后的Payload目录下的.app文件就是你需要的应用程序文件，把.app文件放入crash文件夹中
 - #### 获取symbolicatecrash文件
   在终端输入以下代码
+  
   ```
   find /Applications/Xcode.app -name symbolicatecrash -type f
   ```
@@ -29,9 +30,9 @@
 
 ### 方案一：使用Symbolicatecrash 解析
 - #### 使用终端cd到crash文件所在的目录
-- #### 生成最终转换后的崩溃日志
+- #### 输入以下命令生成最终转换后的崩溃日志
   ```
-  ./symbolicatecrash xxx.crash xxx.app.dSYM > test.log  （test.log代表你要生成的奔溃日志的名字）
+  ./symbolicatecrash xxx.crash xxx.app.dSYM > test.log  （test.log代表你要生成的崩溃日志的名字）
   ```
   > 上面命令可能会出现
   > ```
@@ -42,7 +43,6 @@
   > export DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer
   > ```
   > 然后继续执行第二步的命令
-
 
 
 ### 方案二：根据地址解析
